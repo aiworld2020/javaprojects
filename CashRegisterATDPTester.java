@@ -1,13 +1,13 @@
 
 /**
- * Write a description of class CashRegisterTester here.
+ * Write a description of class Main here.
  *
  * @author (your name)
  * @version (a version number or a date)
  */
-public class CashRegisterTester
+public class CashRegisterATDPTester
 {
-      public static void main(String[] args)
+    public static void main(String[] args)
    {
        final double DOLLAR_VALUE = 1.0;
        final double QUARTER_VALUE = 0.25;
@@ -21,21 +21,20 @@ public class CashRegisterTester
       
       System.out.println("\nFIRST PURCHASE");
       
-      
-      CashRegister3 register = new CashRegister3(); 
+      CashRegisterATDP register = new CashRegisterATDP(); 
       register.recordPurchase(0.75);
       register.recordPurchase(1.50);
       
       // Create Coin objects, and
       // Record price for each type of coin
-      Coin dollar = new Coin(DOLLAR_VALUE, "Dollar");
-      Coin quarter = new Coin
+      CoinATDP dollar = new CoinATDP(DOLLAR_VALUE, "Dollar");
+      CoinATDP quarter = new CoinATDP
       (QUARTER_VALUE, "Quarter");
-      Coin dime = new Coin
+      CoinATDP dime = new CoinATDP
       (DIME_VALUE, "Dime");
-      Coin nickel = new Coin
+      CoinATDP nickel = new CoinATDP
       (NICKEL_VALUE, "Nickel");
-      Coin penny = new Coin
+      CoinATDP penny = new CoinATDP
       (PENNY_VALUE, "Penny");
       register.receivePayment(2, dollar);
       register.receivePayment(1, quarter);
@@ -70,5 +69,4 @@ public class CashRegisterTester
       System.out.println(register.giveChange());
       System.out.println("\tExpected change amount: 2.10"); //... YOUR EXPECT CHANGE VALUE HERE
    }
-  
 }
